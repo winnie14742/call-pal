@@ -1,0 +1,18 @@
+{
+  "name": "Alex",
+  "mode": "calm",
+  "doctor_name": "Dr. Sarah Smith",
+  "doctor_phone": "+14155551234",
+  "bank_name": "Chase Bank",
+  "bank_phone": "+18005241414",
+  "pharmacy_name": "CVS Pharmacy",
+  "pharmacy_phone": "+18007468243",
+  "insurance_name": "Blue Cross Blue Shield",
+  "insurance_phone": "+18002625000",
+  "utility_name": "PG&E",
+  "utility_phone": "+18007432000",
+  "preferred_time": "morning",
+  "preferred_days": ["Monday", "Thursday", "Friday"],
+  "caregiver_name": "Jordan",
+  "caregiver_phone": "+14155559999"
+}

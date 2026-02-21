@@ -1,0 +1,274 @@
+[
+  {
+    "id": "doctor_booking",
+    "door": "doctor",
+    "name": "Doctor Appointment",
+    "icon": "🩺",
+    "input": "My stomach has been hurting for two days. I need to see Dr. Smith on Thursday morning.",
+    "expected_intent": {
+      "intent": "book_appointment",
+      "door": "doctor",
+      "provider_name": "Dr. Sarah Smith",
+      "provider_phone": "+14155551234",
+      "reason": "stomach pain for two days",
+      "time_preference": "Thursday morning",
+      "user_name": "Alex"
+    },
+    "calm": {
+      "script": {
+        "opening": "Hi, I'm calling on behalf of Alex. They've been having stomach pain for two days and would really appreciate an appointment. There's no rush — whenever you have a moment is perfect.",
+        "confirm_line": "Just to make sure I have that right — Thursday at 9am for Alex, for stomach pain. Does that sound correct?",
+        "closing": "Thank you so much. Alex really appreciates your help. Have a lovely day.",
+        "pacing": "slow",
+        "confirm_twice": true
+      },
+      "transcript": [
+        "Thank you for calling Dr. Smith's office, how can I help you today?",
+        "Hi, I'm calling on behalf of Alex. They've been having stomach pain for two days and would really appreciate an appointment. There's no rush — whenever you have a moment is perfect.",
+        "Of course, let me take a look at our availability. We have Thursday at 9am or Friday at 11am.",
+        "Thursday at 9am would be wonderful. Just to make sure I have that right — Thursday at 9am for Alex, for stomach pain. Does that sound correct?",
+        "Yes that's correct, I've got Alex booked in for Thursday the 14th at 9am.",
+        "Perfect. And just to confirm one more time — that's Thursday the 14th at 9am with Dr. Smith for Alex?",
+        "Yes, confirmed. Is there anything else I can help with?",
+        "No, that's everything. Thank you so much for your help. Alex really appreciates it. Have a lovely day."
+      ],
+      "summary": "Great news, Alex. Your appointment with Dr. Sarah Smith is confirmed for Thursday at 9am. The receptionist was very helpful. You don't need to do anything — just show up on Thursday morning."
+    },
+    "power": {
+      "script": {
+        "opening": "Hi, calling for Alex. Need to book an appointment for stomach pain, Thursday morning if possible.",
+        "confirm_line": "Thursday 9am for Alex — stomach pain. Got it?",
+        "closing": "Thanks. Bye.",
+        "pacing": "normal",
+        "confirm_twice": false
+      },
+      "transcript": [
+        "Thank you for calling Dr. Smith's office.",
+        "Hi, calling for Alex. Need to book for stomach pain, Thursday morning.",
+        "We have Thursday at 9am available.",
+        "Perfect, Thursday 9am for Alex — stomach pain. Confirmed?",
+        "Confirmed. Anything else?",
+        "No thanks. Bye."
+      ],
+      "summary": "Done. Appointment booked — Dr. Smith, Thursday 9am, stomach pain."
+    }
+  },
+  {
+    "id": "bank_dispute",
+    "door": "bank",
+    "name": "Bank Dispute",
+    "icon": "🏦",
+    "input": "There's a charge on my Chase account I don't recognize — $47.99 from last Tuesday. I need to dispute it.",
+    "expected_intent": {
+      "intent": "dispute_charge",
+      "door": "bank",
+      "provider_name": "Chase Bank",
+      "provider_phone": "+18005241414",
+      "reason": "unrecognized charge of $47.99 from last Tuesday",
+      "user_name": "Alex"
+    },
+    "calm": {
+      "script": {
+        "opening": "Hi, I'm calling on behalf of Alex. There's a charge on their account they don't recognize and it's been worrying them a little. It's $47.99 from last Tuesday. Could you help look into it when you get a chance?",
+        "confirm_line": "Just so Alex knows — a dispute has been opened for the $47.99 charge from Tuesday. They'll get a confirmation email. Is that right?",
+        "closing": "Thank you so much. Alex really appreciates your patience and help today.",
+        "pacing": "slow",
+        "confirm_twice": true
+      },
+      "transcript": [
+        "Thank you for calling Chase Bank, how can I assist you today?",
+        "Hi, I'm calling on behalf of Alex. There's a charge they don't recognize and it's been worrying them. It's $47.99 from last Tuesday. Could you help look into it?",
+        "Of course, I'd be happy to help. Can you confirm the account holder's name and last four digits of the card?",
+        "The account holder is Alex. I don't have the card digits but the charge is $47.99 from Tuesday the 8th.",
+        "I've located the charge. I'll open a dispute case for you right now.",
+        "Just so Alex knows — a dispute has been opened for the $47.99 charge from Tuesday. They'll get a confirmation email. Is that right?",
+        "That's correct. Case number DIS-889234. Email confirmation within 24 hours.",
+        "And just to confirm the case number — DIS-889234?",
+        "Yes, that's right.",
+        "Wonderful. Thank you so much for your patience and help today. Alex really appreciates it."
+      ],
+      "summary": "All sorted, Alex. The $47.99 charge has been disputed — case number DIS-889234. Chase will email you a confirmation within 24 hours. You don't need to do anything else."
+    },
+    "power": {
+      "script": {
+        "opening": "Calling for Alex. Disputing a $47.99 charge from last Tuesday, unrecognized.",
+        "confirm_line": "Dispute opened, case number noted. Email confirmation incoming?",
+        "closing": "Got it. Thanks.",
+        "pacing": "fast",
+        "confirm_twice": false
+      },
+      "transcript": [
+        "Thank you for calling Chase Bank.",
+        "Calling for Alex. Disputing $47.99 from Tuesday — unrecognized charge.",
+        "I'll open a dispute now. Case number DIS-889234. Confirmation email within 24 hours.",
+        "Dispute opened, case DIS-889234, email incoming. Confirmed?",
+        "Confirmed.",
+        "Thanks."
+      ],
+      "summary": "Dispute filed. Case DIS-889234. Confirmation email in 24 hours."
+    }
+  },
+  {
+    "id": "pharmacy_refill",
+    "door": "pharmacy",
+    "name": "Pharmacy Refill",
+    "icon": "💊",
+    "input": "I need to refill my prescription at CVS. It's metformin, prescription number RX7823456.",
+    "expected_intent": {
+      "intent": "refill_prescription",
+      "door": "pharmacy",
+      "provider_name": "CVS Pharmacy",
+      "provider_phone": "+18007468243",
+      "reason": "prescription refill for metformin",
+      "prescription_number": "RX7823456",
+      "user_name": "Alex"
+    },
+    "calm": {
+      "script": {
+        "opening": "Hi, I'm calling to refill a prescription for Alex. The prescription number is RX7823456, it's for metformin. Whenever it's ready is completely fine — no rush at all.",
+        "confirm_line": "So to make sure I have that right — metformin, RX7823456, for Alex, ready tomorrow after 2pm?",
+        "closing": "Thank you so much. Alex will come by tomorrow afternoon. Have a good day.",
+        "pacing": "slow",
+        "confirm_twice": true
+      },
+      "transcript": [
+        "Thank you for calling CVS Pharmacy.",
+        "Hi, I'm calling to refill a prescription for Alex. Prescription number RX7823456, metformin. Whenever it's ready is fine — no rush.",
+        "I can process that refill now. Let me pull up that prescription.",
+        "Found it — metformin 500mg for Alex. I'll process the refill now.",
+        "So to make sure I have that right — metformin, RX7823456, for Alex, ready tomorrow after 2pm?",
+        "That's correct, ready for pickup tomorrow after 2pm.",
+        "And just to double-check — tomorrow after 2pm at the CVS on Main Street?",
+        "Yes, that's right.",
+        "Perfect. Thank you so much. Alex will come by tomorrow afternoon. Have a good day."
+      ],
+      "summary": "Your metformin refill is all set, Alex. It'll be ready to pick up at CVS tomorrow after 2pm. No rush — just go whenever you're comfortable."
+    },
+    "power": {
+      "script": {
+        "opening": "Refill for Alex. RX7823456, metformin.",
+        "confirm_line": "Ready tomorrow after 2pm?",
+        "closing": "Thanks.",
+        "pacing": "fast",
+        "confirm_twice": false
+      },
+      "transcript": [
+        "CVS Pharmacy, how can I help?",
+        "Refill for Alex. RX7823456, metformin.",
+        "Processing. Ready tomorrow after 2pm.",
+        "Confirmed. Thanks."
+      ],
+      "summary": "Metformin refilled. Pickup tomorrow after 2pm."
+    }
+  },
+  {
+    "id": "insurance_query",
+    "door": "insurance",
+    "name": "Insurance Query",
+    "icon": "🛡️",
+    "input": "I need to check if my Blue Cross plan covers physiotherapy and how many sessions I get.",
+    "expected_intent": {
+      "intent": "insurance_query",
+      "door": "insurance",
+      "provider_name": "Blue Cross Blue Shield",
+      "provider_phone": "+18002625000",
+      "reason": "coverage query for physiotherapy sessions",
+      "user_name": "Alex"
+    },
+    "calm": {
+      "script": {
+        "opening": "Hi, I'm calling on behalf of Alex. They'd like to understand their physiotherapy coverage — specifically whether it's covered and how many sessions are included. Insurance can be confusing so any help explaining it clearly would mean a lot.",
+        "confirm_line": "Just so Alex is clear — physiotherapy is covered, with 20 sessions per year, and a $30 copay each time. Is that right?",
+        "closing": "Thank you so much for explaining everything clearly. Alex really appreciates your patience.",
+        "pacing": "slow",
+        "confirm_twice": true
+      },
+      "transcript": [
+        "Thank you for calling Blue Cross Blue Shield member services.",
+        "Hi, calling on behalf of Alex. They'd like to understand their physiotherapy coverage. Insurance can be confusing, so any clear explanation would mean a lot.",
+        "Of course, I'm happy to help. Can I get Alex's member ID or date of birth to pull up the account?",
+        "I don't have the member ID handy, but the name is Alex and the plan is through Blue Cross.",
+        "I can look that up. One moment... I've found the account. Alex has physiotherapy coverage — 20 sessions per year with a $30 copay per visit.",
+        "Just so Alex is clear — physiotherapy is covered, 20 sessions per year, $30 copay each time. Is that right?",
+        "That's correct. Sessions reset every January 1st.",
+        "And just to confirm — 20 sessions, $30 copay, resets January 1st?",
+        "Yes, that's all correct.",
+        "Perfect. Thank you so much for explaining everything so clearly. Alex really appreciates your patience."
+      ],
+      "summary": "Good news, Alex. Physiotherapy is covered under your Blue Cross plan — you get 20 sessions per year with a $30 copay each visit. Sessions reset on January 1st each year. You're all set."
+    },
+    "power": {
+      "script": {
+        "opening": "Calling for Alex. Checking physiotherapy coverage on their Blue Cross plan.",
+        "confirm_line": "20 sessions, $30 copay, resets January. Confirmed?",
+        "closing": "Got it. Thanks.",
+        "pacing": "fast",
+        "confirm_twice": false
+      },
+      "transcript": [
+        "Blue Cross member services.",
+        "Checking physiotherapy coverage for Alex on Blue Cross.",
+        "20 sessions per year, $30 copay. Resets January 1st.",
+        "20 sessions, $30 copay, resets January. Confirmed?",
+        "Confirmed.",
+        "Thanks."
+      ],
+      "summary": "Physio covered. 20 sessions/year, $30 copay. Resets Jan 1."
+    }
+  },
+  {
+    "id": "utility_service",
+    "door": "utility",
+    "name": "Utility / Gov Service",
+    "icon": "⚡",
+    "input": "My electricity bill has a weird extra charge of $23 this month. Can you call PG&E and find out what it is?",
+    "expected_intent": {
+      "intent": "utility_service",
+      "door": "utility",
+      "provider_name": "PG&E",
+      "provider_phone": "+18007432000",
+      "reason": "unexplained $23 charge on electricity bill",
+      "user_name": "Alex"
+    },
+    "calm": {
+      "script": {
+        "opening": "Hi, I'm calling on behalf of Alex. There's an extra $23 charge on their electricity bill this month that they don't quite understand. Could you help explain what it might be? Alex just wants to understand, not cause any trouble.",
+        "confirm_line": "So the $23 is a grid maintenance fee, it appears every 3 months, and it's normal and expected. Is that right?",
+        "closing": "Thank you so much for explaining that. Alex feels much better knowing what it is. Have a good day.",
+        "pacing": "slow",
+        "confirm_twice": true
+      },
+      "transcript": [
+        "Thank you for calling PG&E customer service.",
+        "Hi, calling on behalf of Alex. There's an extra $23 on their bill this month they don't understand. They just want to know what it is — not causing trouble, just a bit confused.",
+        "Of course, let me pull up the account. Can I get the account number or service address?",
+        "The account holder is Alex. I don't have the number handy.",
+        "I can look by name and address. One moment... Found it. That $23 charge is a quarterly grid maintenance fee. It appears every three months and is a standard utility charge.",
+        "So the $23 is a grid maintenance fee, it appears every 3 months, and it's normal and expected. Is that right?",
+        "That's exactly right. Completely standard.",
+        "And just to be sure — it's not a mistake, it'll appear again in 3 months, and there's nothing to worry about?",
+        "Correct on all three.",
+        "Perfect. Thank you so much for explaining that so clearly. Alex feels much better knowing what it is. Have a good day."
+      ],
+      "summary": "Nothing to worry about, Alex. That $23 is a regular quarterly grid maintenance fee — completely normal. It will show up every 3 months. Everything is fine with your account."
+    },
+    "power": {
+      "script": {
+        "opening": "Calling for Alex. Querying a $23 extra charge on this month's PG&E bill.",
+        "confirm_line": "Quarterly grid fee, normal, appears every 3 months. Confirmed?",
+        "closing": "Got it. Thanks.",
+        "pacing": "fast",
+        "confirm_twice": false
+      },
+      "transcript": [
+        "PG&E customer service.",
+        "Querying $23 extra charge on Alex's bill this month.",
+        "That's a quarterly grid maintenance fee. Standard charge every 3 months.",
+        "Quarterly grid fee, normal, every 3 months. Confirmed?",
+        "Confirmed.",
+        "Thanks."
+      ],
+      "summary": "$23 = quarterly grid maintenance fee. Normal. Every 3 months."
+    }
+  }
+]
